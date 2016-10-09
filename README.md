@@ -1,6 +1,6 @@
 Focal-CSS
 ===========
-Focal-CSS is a CSS-only solution to maintaining image focal points in different resolutions. By default, images resize/crop from the top left corner regardless of where the image's focal (or center of attention) point is.
+Focal-CSS is a CSS-only solution to maintaining image focal points in different resolutions. By default, images resize/crop from the top left corner regardless of where the image's focal (or center of attention) point is. Focal-CSS changes this so that your image's center of attention is always visible.
 
 Installation
 ------------
