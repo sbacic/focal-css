@@ -1,0 +1,21 @@
+@mixin focal($rows, $cols, $classname)
+  $total    : $rows*$cols
+  $incRows  : 100/$rows
+  $incCols  : 100/$cols
+  $halfRows : $incRows/2
+  $halfCols : $incCols/2
+
+  @for $x from 1 to $rows+1
+    @for $y from 1 to $cols+1
+      .#{$classname}-#{$x}#{$y}
+        background-repeat: no-repeat
+        background-position: (($incRows*$y)-$halfRows)+% (($incCols*$x)-$halfCols)+%
+        overflow: hidden
+
+        img
+          position: relative
+          top: (($incCols*$x)-$halfCols)+%
+          left: (($incRows*$y)-$halfRows)+%
+          transform: translate(-(($incRows*$y)-$halfRows)+%, -(($incCols*$x)-$halfCols)+%)
+
+@include focal(8,8, 'focal')

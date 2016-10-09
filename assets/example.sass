@@ -1,0 +1,24 @@
+body
+  width: 100%
+  margin: 15px auto
+  padding: 0
+
+h2, h4
+  padding: 0
+  margin: 0
+  text-align: center
+
+.example
+  width: 1480px
+  margin: 20px auto
+  overflow: hidden
+
+.bg .focus
+  background-image: url("cropped.jpg")
+
+@for $i from 1 to 6
+  .focus:nth-child(#{$i})
+    width: 100+$i*100px
+    height: 100+$i*100px
+    margin: 5px
+    float: left
